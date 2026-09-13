@@ -13,6 +13,7 @@ export const Route = createFileRoute("/play")({ component: Play });
 function Play() {
   const api = useGame();
   const { snap, restart, move, rotate, softDrop, hardDrop, hold, phaseStep, confirm } = api;
+  const hdPct = Math.round(snap.hd * 100);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -93,7 +94,7 @@ function Play() {
   }, [snap.status, restart, move, rotate, softDrop, hardDrop, hold, phaseStep, confirm]);
 
   return (
-    <div className="min-h-dvh overflow-x-hidden bg-bg text-fg">
+    <div className="game-shell min-h-dvh overflow-x-hidden bg-bg text-fg lg:overflow-visible">
       <header
         className="sticky top-0 z-20 border-b border-border bg-bg/80 backdrop-blur-xl"
         style={{ paddingTop: "env(safe-area-inset-top)" }}
@@ -120,8 +121,13 @@ function Play() {
         </div>
       </header>
 
-      <main className="mx-auto grid max-w-6xl gap-4 px-3 py-3 sm:px-4 sm:py-5 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-6 lg:px-6">
-        <div className="flex flex-col gap-4">
+      <main className="game-main mx-auto flex max-w-6xl flex-col gap-2 px-3 py-2 sm:gap-4 sm:px-4 sm:py-5 lg:grid lg:h-auto lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-6 lg:px-6">
+        <div className="flex min-h-0 flex-1 flex-col gap-2 sm:gap-4">
+          <div className="grid shrink-0 grid-cols-3 gap-2 lg:hidden">
+            <MobileStat label="Score" value={snap.score.toLocaleString()} />
+            <MobileStat label="Level" value={String(snap.level)} />
+            <MobileStat label="Density" value={`${hdPct}%`} accent={snap.hdState === "pressure"} />
+          </div>
           <DualWells api={api} />
           <ControlPads api={api} />
           <p className="hidden text-[12px] leading-relaxed text-muted sm:block">
@@ -129,9 +135,12 @@ function Play() {
             Space hard drop · ↑ rotate (xy) · R rotate phase (xw) · F rotate (xz) · A/D depth
             (y) · Q/E phase (w) · Z/X Phase Slide · Enter confirm · C hold.
           </p>
-          <p className="text-[12px] leading-relaxed text-subtle sm:hidden">
+          <p className="hidden text-[12px] leading-relaxed text-subtle sm:hidden">
             Swipe the board ←/→ to move, ↓ to soft drop, flick down to hard drop, tap to rotate.
             Pads below handle depth, phase, and Phase Slide.
+          </p>
+          <p className="mt-auto text-center text-[10px] tracking-wide text-subtle sm:hidden">
+            Swipe a board to move · tap to rotate · use the pads for phase
           </p>
           <p className="hidden text-[12px] leading-relaxed text-muted sm:block">
             Clear a full <span className="text-fg">x·y·w hyper-slab</span> at one height. Nest
@@ -140,7 +149,9 @@ function Play() {
             shadow-stacking penalty kills you faster.
           </p>
         </div>
-        <GameHud api={api} />
+        <div className="hidden lg:block">
+          <GameHud api={api} />
+        </div>
       </main>
 
       {snap.status === "over" ? (
@@ -156,6 +167,25 @@ function Play() {
           </div>
         </div>
       ) : null}
+    </div>
+  );
+}
+
+function MobileStat({
+  label,
+  value,
+  accent,
+}: {
+  label: string;
+  value: string;
+  accent?: boolean;
+}) {
+  return (
+    <div className="rounded-md border border-border bg-surface-2/80 px-2.5 py-1.5">
+      <div className="text-[9px] tracking-[0.18em] text-subtle uppercase">{label}</div>
+      <div className={accent ? "text-danger text-sm tabular-nums" : "text-fg text-sm tabular-nums"}>
+        {value}
+      </div>
     </div>
   );
 }
