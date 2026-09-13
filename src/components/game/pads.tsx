@@ -18,7 +18,7 @@ function Pad({
       variant="pad"
       onClick={onClick}
       className={cn(
-        "h-11 min-w-11 px-2 text-xs tracking-wide",
+        "h-11 min-w-11 touch-manipulation px-2 text-xs tracking-wide",
         wide && "col-span-2",
         accent && "border-accent/50 bg-accent/10 text-accent hover:bg-accent/20",
       )}
