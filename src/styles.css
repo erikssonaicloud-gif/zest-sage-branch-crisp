@@ -124,3 +124,16 @@
 .font-display {
   font-family: var(--font-display);
 }
+
+@media (max-width: 1023px) {
+  .game-shell {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .game-main {
+    height: calc(100dvh - 57px - env(safe-area-inset-top));
+    min-height: 0;
+    overflow: hidden;
+  }
+}
