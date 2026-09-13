@@ -120,7 +120,7 @@ function Play() {
         </div>
       </header>
 
-      <main className="mx-auto grid max-w-6xl gap-6 px-4 py-5 lg:grid-cols-[minmax(0,1fr)_280px] lg:px-6">
+      <main className="mx-auto grid max-w-6xl gap-4 px-3 py-3 sm:px-4 sm:py-5 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-6 lg:px-6">
         <div className="flex flex-col gap-4">
           <DualWells api={api} />
           <ControlPads api={api} />
@@ -133,7 +133,7 @@ function Play() {
             Swipe the board ←/→ to move, ↓ to soft drop, flick down to hard drop, tap to rotate.
             Pads below handle depth, phase, and Phase Slide.
           </p>
-          <p className="text-[12px] leading-relaxed text-muted">
+          <p className="hidden text-[12px] leading-relaxed text-muted sm:block">
             Clear a full <span className="text-fg">x·y·w hyper-slab</span> at one height. Nest
             small pieces into hyperpockets (≥6/8 shielded) across phase to raise{" "}
             <span className="text-accent">hyperdensity</span> — stack only in one brane and the
