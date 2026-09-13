@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 
 export function TesseractHero() {
   return (
-    <div className="relative mx-auto grid h-[340px] w-full max-w-[420px] place-items-center overflow-hidden sm:h-[420px]">
+    <div className="relative mx-auto grid h-[220px] w-full max-w-[420px] place-items-center overflow-hidden sm:h-[340px] lg:h-[420px]">
       <div className="absolute size-64 rounded-full bg-accent/10 blur-3xl" />
       <div
         className="relative h-40 w-40 sm:h-48 sm:w-48"
