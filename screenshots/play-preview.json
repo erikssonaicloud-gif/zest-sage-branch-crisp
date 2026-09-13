@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/play",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NESTRIS Δ",
+      "hasCanvas": false,
+      "bodyTextLen": 679,
+      "bodyTextHash": "3106f72e911e2f08c521b27ecab80aa73fa995ec246769a655b1dea364beaa63",
+      "bodyTextPrefix": "Back NESTRIS Δ · prototype v0.1 · 4D engine WIDTH × HEIGHT (X · ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NESTRIS Δ",
+      "hasCanvas": false,
+      "bodyTextLen": 616,
+      "bodyTextHash": "8d809d0a75a9293a759092d08fa791581eafe4ab617c63b0bf0258d5814f4fb6",
+      "bodyTextPrefix": "Back NESTRIS Δ · prototype WIDTH × HEIGHT (X · Z) DEPTH × HEIGHT",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/play-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/play-preview.json"
+}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NESTRIS Δ",
+      "hasCanvas": false,
+      "bodyTextLen": 3383,
+      "bodyTextHash": "a5b5b7fba696eecba8ef6dd4a82570d51aa87522b4adbcdc867d9e215ed8e3c2",
+      "bodyTextPrefix": "NESTRIS Δ The Leap Mechanics Editions Pre-order TRANSDIMENSIONAL",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NESTRIS Δ",
+      "hasCanvas": false,
+      "bodyTextLen": 3371,
+      "bodyTextHash": "32369145e03fcf719d7478401c201c6b5f3a31d8cb1488e4cbad623f61023598",
+      "bodyTextPrefix": "NESTRIS Δ Pre-order TRANSDIMENSIONAL PUZZLE NESTRIS Δ The ternar",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
