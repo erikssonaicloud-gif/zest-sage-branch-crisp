@@ -195,8 +195,8 @@ export function DualWells({ api }: { api: GameApi }) {
   const color = piece?.color ?? "#7dd3fc";
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="grid grid-cols-2 gap-3 sm:gap-5">
+    <div className="flex flex-col gap-3 sm:gap-4">
+      <div className="grid grid-cols-2 gap-2 sm:gap-5">
         <Grid
           title="Width × Height (X · Z)"
           width={WELL.X}
