@@ -101,10 +101,10 @@ function Home() {
 
       <section id="top" className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,color-mix(in_oklab,var(--color-accent)_12%,transparent),transparent_62%)]" />
-        <div className="mx-auto grid max-w-6xl items-center gap-6 px-5 py-16 lg:grid-cols-2 lg:py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-5 px-5 py-10 sm:gap-6 sm:py-16 lg:grid-cols-2 lg:py-24">
           <div className="stagger-in relative z-10">
             <p className="text-[11px] tracking-[0.32em] text-accent uppercase">Transdimensional puzzle</p>
-            <h1 className="mt-4 font-display text-6xl leading-[0.9] tracking-tight sm:text-8xl">
+            <h1 className="mt-4 font-display text-5xl leading-[0.9] tracking-tight sm:text-8xl">
               NESTRIS <span className="text-accent">Δ</span>
             </h1>
             <p className="mt-6 max-w-md text-lg text-muted">
@@ -133,7 +133,7 @@ function Home() {
       </section>
 
       <section id="leap" className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-5 py-20">
+        <div className="mx-auto max-w-6xl px-5 py-12 lg:py-20">
           <p className="text-[11px] tracking-[0.32em] text-subtle uppercase">The transdimensional leap</p>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl">From binary to ternary mating</h2>
           <p className="mt-5 max-w-2xl text-muted">
@@ -165,7 +165,7 @@ function Home() {
       </section>
 
       <section className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-5 py-20">
+        <div className="mx-auto max-w-6xl px-5 py-12 lg:py-20">
           <p className="text-[11px] tracking-[0.32em] text-subtle uppercase">How the ancestors escalate</p>
           <h2 className="mt-3 font-display text-4xl">3D → Δ, dimension by dimension</h2>
           <div className="mt-8 hidden overflow-x-auto rounded-xl border border-border md:block">
@@ -209,7 +209,7 @@ function Home() {
       </section>
 
       <section id="mechanics" className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-5 py-20">
+        <div className="mx-auto max-w-6xl px-5 py-12 lg:py-20">
           <p className="text-[11px] tracking-[0.32em] text-subtle uppercase">New transdimensional mechanics</p>
           <h2 className="mt-3 font-display text-4xl">Play across the fourth axis</h2>
           <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -229,7 +229,7 @@ function Home() {
       </section>
 
       <section id="editions" className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-5 py-20">
+        <div className="mx-auto max-w-6xl px-5 py-12 lg:py-20">
           <p className="text-[11px] tracking-[0.32em] text-subtle uppercase">Editions</p>
           <h2 className="mt-3 font-display text-4xl">Claim your axis</h2>
           <p className="mt-4 max-w-xl text-muted">
@@ -273,7 +273,7 @@ function Home() {
       </section>
 
       <section id="waitlist" className="border-t border-border">
-        <div className="mx-auto grid max-w-6xl items-start gap-10 px-5 py-20 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-6xl items-start gap-8 px-5 py-12 lg:grid-cols-2 lg:gap-10 lg:py-20">
           <div>
             <p className="text-[11px] tracking-[0.32em] text-subtle uppercase">Join the waitlist</p>
             <h2 className="mt-3 font-display text-4xl">Phase into the build</h2>
