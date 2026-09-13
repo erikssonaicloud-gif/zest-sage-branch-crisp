@@ -67,7 +67,7 @@ function Grid({
       <div className="mb-1.5 text-[10px] tracking-[0.22em] uppercase text-subtle">{title}</div>
       <div
         {...swipe}
-        className="grid gap-[2px] rounded-lg border border-border bg-white/[0.015] p-1.5"
+        className="grid max-h-72 gap-[2px] rounded-lg border border-border bg-white/[0.015] p-1.5 sm:max-h-none"
         style={{
           gridTemplateColumns: `repeat(${width}, 1fr)`,
           gridTemplateRows: `repeat(${height}, 1fr)`,
@@ -118,8 +118,8 @@ function PhaseStrip({
       )}
     >
       <div className="mb-0.5 text-center text-[9px] text-subtle">w{w}</div>
-      <div
-        className="grid gap-px"
+        <div
+          className="grid h-12 gap-px sm:h-auto"
         style={{
           gridTemplateColumns: `repeat(${WELL.X}, 1fr)`,
           gridTemplateRows: `repeat(${WELL.Z}, 1fr)`,
@@ -195,8 +195,8 @@ export function DualWells({ api }: { api: GameApi }) {
   const color = piece?.color ?? "#7dd3fc";
 
   return (
-    <div className="flex flex-col gap-3 sm:gap-4">
-      <div className="grid grid-cols-2 gap-2 sm:gap-5">
+    <div className="flex min-h-0 flex-1 flex-col gap-2 sm:flex-none sm:gap-4">
+      <div className="grid min-h-0 grid-cols-2 gap-2 sm:gap-5">
         <Grid
           title="Width × Height (X · Z)"
           width={WELL.X}
